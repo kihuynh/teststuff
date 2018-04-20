@@ -1,0 +1,8 @@
+<% if object.error.any? %>
+  <h3>Oops! Something happened. Try again!</h3>
+  <ul>
+    <% if @product.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
