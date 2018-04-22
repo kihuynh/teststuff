@@ -1,24 +1,43 @@
-# README
+# Food Products
+#### Ruby on Rails, 4-20-2018
+## Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Setup/Installation
 
-* Ruby version
+To clone onto your local machine, run the following in the terminal
+```
+ $ git clone https://github.com/kihuynh/to_do_rails
+```
+go into the project folder
+```
+$ rake db:create
+$ rake db:migrate db:test:prepare
+$ bundle install
+```
+Use if you want to use Faker DB instead <br>
+```
+$ rake db:seed
+```
 
-* System dependencies
+Run the rails server
+`
+$ rails s
+`
 
-* Configuration
+## Future features
+- add review crud
+- seed 5 faker reviews to each 50 products
+- styling
 
-* Database creation
+## Technologies Used
+- Ruby On Rails
+- Gems (Bootstrap, Faker, Sass, etc)
+- Testing (rspec, Capybara, etc)
+- Postgres
 
-* Database initialization
+## License
 
-* How to run the test suite
+*Licensed under MIT license*
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Copyright (c) 2018 **_Kimberly Huynh_**
