@@ -10,6 +10,9 @@
 <p>Cost: $<%= @product.cost %></p>
 <p>Origin: <%= @product.origin %></p>
 
+<p><%= link_to "Add a review", new_product_review_path(@product) %> | <%= link_to "Edit Product", edit_product_url %> | <%= link_to "Delete Product", product_path(@product),
+                          :data => {:confirm => "You sure?",
+                                    :method => "delete"} %></p>
 
 <!-- Customer review section. Loop through all of them and all dat -->
 <% if @product.reviews.any? %>

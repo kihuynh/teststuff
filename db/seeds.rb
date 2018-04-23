@@ -2,20 +2,18 @@ Product.destroy_all
 Review.destroy_all
 
 50.times do |index|
-  Product.create!(
-    name: Faker::Food.unique.dish,
-    cost: Faker::Commerce.price,
-    origin: Faker::Address.country
+  product = Product.create!(
+    name: Faker::Book.unique.title,
+    cost: rand(0..10000),
+    origin: Faker::StarWars.planet
+  )
+  5.times do |index|
+    product.reviews.create(
+      author: Faker::Name.unique.name,
+      content_body: Faker::Lorem.sentences(4).join(" "),
+      rating: rand(0..5)
     )
-end
-
-5.times do |index|
-  Reviews.create!(
-    author: Faker::Book.unique.author,
-    content_body: Faker::Hipster.sentence(50),
-    rating: Faker::Number.between(1, 5),
-    product_id: @product_id
-    )
+  end
 end
 
 p "created #{Product.count} products"
