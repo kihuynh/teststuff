@@ -26,8 +26,10 @@ $ rails s
 `
 
 ## Future features
-- add review crud
+- add reviews into products
 - seed 5 faker reviews to each 50 products
+- Testing
+- Flash messages
 - styling
 
 ## Technologies Used
